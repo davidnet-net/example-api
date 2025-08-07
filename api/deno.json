@@ -1,6 +1,6 @@
 {
 	"tasks": {
-		"run": "deno run --allow-net --allow-read=logs --allow-write=logs main.ts"
+		"run": "deno run --allow-net --allow-read=logs --allow-write=logs --allow-env='DA_*' main.ts"
 	},
 	"imports": {
 		"@std/assert": "jsr:@std/assert@1"

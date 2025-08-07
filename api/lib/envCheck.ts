@@ -1,0 +1,23 @@
+export function envCheck() {
+    //? Database
+    const DA_DB_HOST = Deno.env.get("DA_DB_HOST");
+    const DA_DB_USER = Deno.env.get("DA_DB_USER");
+    const DA_DB_PASS = Deno.env.get("DA_DB_PASS");
+    const DB_NAME = Deno.env.get("DA_DB_NAME");
+
+    if (!DA_DB_HOST || !typeof String) {return "DA_DB_HOST"};
+    if (!DA_DB_USER || !typeof String) {return "DA_DB_USER"};
+    if (!DA_DB_PASS || !typeof String) {return "DA_DB_PASS"};
+    if (!DB_NAME || !typeof String) {return "DA_DB_NAME"};
+
+    //? Logging
+    const DA_LOG_DIR =  Deno.env.get("DA_LOG_DIR");
+    const DA_KEEP_LOG_DAYS =  Deno.env.get("DA_KEEP_LOG_DAYS");
+    const DA_LOG_TO_TERMINAL =  Deno.env.get("DA_LOG_TO_TERMINAL");
+
+    if (!DA_LOG_DIR || !typeof String) {return "DA_LOG_DIR"};
+    if (!DA_KEEP_LOG_DAYS || !typeof Number) {return "DA_KEEP_LOG_DAYS"};
+    if (!DA_LOG_TO_TERMINAL || !typeof Boolean) {return "DA_LOG_TO_TERMINAL"};
+}
+
+export default envCheck;
