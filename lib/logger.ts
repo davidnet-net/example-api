@@ -46,7 +46,10 @@ async function rotateLogs() {
 	const maxAge = config.keep_log_days * 24 * 60 * 60 * 1000;
 
 	for await (const entry of Deno.readDir(LOG_DIR)) {
-		if (entry.isFile && entry.name.endsWith(LOG_EXTENSION) && entry.name !== "latest.log") {
+		if (
+			entry.isFile && entry.name.endsWith(LOG_EXTENSION) &&
+			entry.name !== "latest.log"
+		) {
 			const filePath = join(LOG_DIR, entry.name);
 			const stat = await Deno.stat(filePath);
 			if (stat.mtime && now - stat.mtime.getTime() > maxAge) {

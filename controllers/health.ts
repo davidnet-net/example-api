@@ -1,11 +1,11 @@
 import { Context } from "https://deno.land/x/oak@v12.6.1/mod.ts";
-import uptime from "../lib/uptime.ts"
+import uptime from "../lib/uptime.ts";
 
 export const health = (ctx: Context) => {
 	let DatabaseHealthy = true;
 	try {
 		//await someDatabase.ping();
-	} catch(_) {
+	} catch (_) {
 		DatabaseHealthy = false;
 	}
 
