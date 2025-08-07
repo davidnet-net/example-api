@@ -25,7 +25,6 @@ jobs:
       - name: Regenerate lockfile
         run: |
           rm -f deno.lock
-          deno run --lock=deno.lock --lock-write main.ts  # ← replace with your real entry point
 
       - name: Verify formatting
         run: deno fmt --check
