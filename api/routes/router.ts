@@ -4,10 +4,6 @@ import health from "./health.ts";
 
 const router = new Router();
 
-router.get("/", (ctx) => {
-	ctx.response.body = { message: "OK" };
-});
-
 router.use("/health", health.routes(), health.allowedMethods());
 // If AUTH is needed add [auth] like below
 //router.use("/health", auth, health.routes(), health.allowedMethods());
