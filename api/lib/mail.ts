@@ -60,7 +60,6 @@ export async function loadEmailTemplate(
 	return html;
 }
 
-
 //? example
 // await sendEmail(
 //	"contact@davidnet.net",
