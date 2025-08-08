@@ -6,3 +6,7 @@
 - OneLine JSON based logging.
 - Main --> Router --> Routes --> Controller --> Lib | Modulair system
 - Middlewares
+
+> [!IMPORTANT]
+> When working on the API and especially when formatting.
+> Set the terminal to be in /api else the deno config gets ignored.
