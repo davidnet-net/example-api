@@ -45,7 +45,7 @@ export async function getDBClient(): Promise<Client | null> {
 
 	// Attempt (re)connection
 	if (!initialConnectionSucceeded || !dbClient) {
-        console.log("Retrying inital connection")
+		console.log("Retrying inital connection");
 		return await connectToDB();
 	}
 

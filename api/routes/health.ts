@@ -1,5 +1,5 @@
 import { Router } from "https://deno.land/x/oak@v12.6.1/mod.ts";
-import { health, dockerhealth } from "../controllers/health.ts";
+import { dockerhealth, health } from "../controllers/health.ts";
 
 const router = new Router();
 

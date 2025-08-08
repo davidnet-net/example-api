@@ -5,6 +5,7 @@ import correlationID from "./middlewares/correlationID.ts";
 import errorHandler from "./middlewares/errorHandler.ts";
 import requestLogger from "./middlewares/requestLogger.ts";
 import envCheck from "./lib/envCheck.ts";
+import { loadEmailTemplate, sendEmail } from "./lib/mail.ts";
 
 if (import.meta.main) {
 	// Check if .env & config.ts are valid.
@@ -53,5 +54,4 @@ if (import.meta.main) {
 			log(`Unknown error: ${err}`);
 		}
 	}
-
 }
